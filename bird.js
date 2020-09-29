@@ -7,13 +7,18 @@ class Bird {
     this.grav = 0.7;
     this.jump = -12;
     this.vel = 0;
+    this.type = random(birdImage.length - 1);
+    this.type = round(this.type);
     this.death = false;
     if (brain){
       this.brain = brain.copy();
-      this.brain.mutate(0.1);
     } else {
       this.brain = new NeuralNetwork(6,42,2);
     }
+  }
+  
+  mutate() {
+    this.brain.mutate(0.1);
   }
   
   think(pipes) {
