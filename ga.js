@@ -16,6 +16,7 @@ function nextGeneration(){
 function pickOne(){
   let bird = random(saveBirds);
   let child = new Bird(bird.brain);
+  child.mutate();
   return child;
 }
 
