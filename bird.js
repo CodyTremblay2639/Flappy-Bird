@@ -7,8 +7,6 @@ class Bird {
     this.grav = 0.7;
     this.jump = -12;
     this.vel = 0;
-    this.type = random(birdImage.length - 1);
-    this.type = round(this.type);
     this.death = false;
     if (brain){
       this.brain = brain.copy();
